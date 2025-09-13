@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f8fafc;
+}
+
+@page {
+  size: A4;
+  margin: 0.5in;
+}
+
+@media print {
+  body {
+    background: white;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  /* Certificate print styles */
+  .certificate-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: 2px solid #8B7355 !important;
+    page-break-inside: avoid;
+  }
+  
+  .certificate-header {
+    background: linear-gradient(to right, #D4AF37, #B8860B) !important;
+    color: white !important;
+    padding: 1rem !important;
+    text-align: center !important;
+    page-break-after: avoid;
+  }
+  
+  .certificate-body {
+    padding: 1rem !important;
+  }
+  
+  .nft-image {
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin: 0 auto 1rem !important;
+    display: block !important;
+  }
+  
+  .nft-info {
+    font-size: 11pt !important;
+    line-height: 1.3 !important;
+  }
+  
+  .nft-info h3 {
+    font-size: 14pt !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .nft-info div {
+    margin-bottom: 0.3rem !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  .contract-address,
+  .owner-address {
+    font-family: monospace !important;
+    font-size: 9pt !important;
+    word-break: break-all !important;
+    max-width: 100% !important;
+  }
+  
+  .certificate-footer {
+    margin-top: 1rem !important;
+    padding-top: 0.5rem !important;
+    border-top: 1px solid #ccc !important;
+    font-size: 9pt !important;
+  }
+  
+  /* Prevent text overflow */
+  * {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+  
+  /* Ensure content fits on page */
+  .grid {
+    display: block !important;
+  }
+  
+  .md\\:grid-cols-2 > * {
+    margin-bottom: 1rem !important;
+  }
+}
